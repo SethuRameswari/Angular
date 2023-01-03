@@ -1,0 +1,32 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <div class="form-group">
+    <label>Title:</label>
+    <select class="form-control" formControlName="submitform">
+      <option *ngFor="let item of data">{{ item.title }}</option>
+    </select>
+    <br />
+    <label>First name:</label>
+    <input
+      type="text"
+      name="fname"
+      class="form-control"
+      formControlName="fname"
+    />
+    <br />
+    <label>Last name:</label>
+    <input
+      type="text"
+      name="lname"
+      class="form-control"
+      formControlName="lname"
+    />
+    <br />
+    <input
+      type="checkbox"
+      name="tanc"
+      class="form-control"
+      formControlName="tandc"
+    />I accept Terms and conditions
+  </div>
+  <button style="background-color:red" type="submit">Submit</button>
+</form>
